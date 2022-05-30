@@ -104,12 +104,13 @@ function App() {
     const source = axios.CancelToken.source()
     if (inView && !isFetching && !gotLoadMore.current) {
       gotLoadMore.current = true
-      if (totalCount && totalCount > gifs.length) fetchGifs(source.token)
+      if (totalCount && totalCount > gifs.length)
+        fetchGifs(source.token, undefined, search)
     }
     return () => {
       if (!gotLoadMore.current) source.cancel()
     }
-  }, [inView])
+  }, [inView, search])
 
   useEffect(() => {
     // Responsible to fetch initial gifs on load time
