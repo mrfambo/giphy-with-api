@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.secondary-button {
+  @apply py-1.5 px-5 text-sm font-medium text-gray-900 active:bg-gray-200 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:ring-0 disabled:bg-gray-200;
+}
+
+.without-ring {
+  @apply focus:ring-0 focus:ring-offset-0;
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+.avoid-chrome-autofill-bg:-webkit-autofill,
+.avoid-chrome-autofill-bg:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s !important;
+}
+
+.break-inside {
+  break-inside: avoid;
+}
+

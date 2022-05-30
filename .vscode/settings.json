@@ -1,0 +1,18 @@
+{
+  "files.associations": {
+    "*.js": "javascript"
+  },
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true,
+    "**/build": true,
+    "**/data-files": true
+  },
+}
